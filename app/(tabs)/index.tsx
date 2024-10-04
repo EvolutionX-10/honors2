@@ -1,10 +1,20 @@
-import { StyleSheet, Platform, StatusBar, TextInput, Text, TouchableOpacity, ScrollView } from "react-native";
+import {
+	StyleSheet,
+	Platform,
+	StatusBar,
+	TextInput,
+	Text,
+	TouchableOpacity,
+	ScrollView,
+	Pressable,
+} from "react-native";
 import { View } from "react-native";
 import Feather from "@expo/vector-icons/Feather";
 import Svg, { Path } from "react-native-svg";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import Carousel from "@/components/Carousel";
 import ProductList from "@/components/ProductList";
+import { Link } from "expo-router";
 
 export default function HomeScreen() {
 	return (
@@ -54,7 +64,11 @@ export default function HomeScreen() {
 						/>
 					</Svg>
 					<View style={styles.icons}>
-						<Feather name="heart" size={24} color="black" />
+						<Link href="/wishlist" asChild>
+							<Pressable>
+								<Feather name="heart" size={24} color="black" />
+							</Pressable>
+						</Link>
 						<Feather name="shopping-cart" size={24} color="black" />
 						<Feather name="bell" size={24} color="black" />
 					</View>

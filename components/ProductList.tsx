@@ -31,6 +31,34 @@ const products = [
 		category: "Bag",
 		price: "Rp350.000",
 	},
+	{
+		id: "5",
+		imageURL: require("@/assets/images/p1.png"),
+		name: "AIR LEGGING SPORT",
+		category: "Apparel",
+		price: "Rp200.000",
+	},
+	{
+		id: "6",
+		imageURL: require("@/assets/images/p2.png"),
+		name: "AERO SPORT MAX",
+		category: "Footwear",
+		price: "Rp450.000",
+	},
+	{
+		id: "7",
+		imageURL: require("@/assets/images/p3.png"),
+		name: "RUNNER BLUE EDITION",
+		category: "Footwear",
+		price: "Rp250.000",
+	},
+	{
+		id: "8",
+		imageURL: require("@/assets/images/p4.png"),
+		name: "SPORT + BAG",
+		category: "Bag",
+		price: "Rp350.000",
+	},
 ];
 
 const ProductList = () => {
