@@ -25,23 +25,23 @@ const styles = StyleSheet.create({
 		shadowOpacity: 0.1,
 		shadowRadius: 2,
 		margin: 10,
-        width: "45%",
+		width: "45%",
 	},
 	image: {
 		width: "100%",
 		height: 200,
 		resizeMode: "cover",
+		borderRadius: 10,
 	},
 	details: {
 		padding: 10,
-        gap: 10,
+		gap: 10,
 		alignItems: "flex-start",
 	},
 	productName: {
-		fontSize: 16,
-		fontWeight: "bold",
+		fontSize: 20,
+		fontFamily: "Bebas",
 		color: "#333",
-		marginTop: 10,
 	},
 	category: {
 		fontSize: 14,
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
 	},
 	price: {
 		fontSize: 16,
-		color: "orange",
+		color: "#f26522",
 		fontWeight: "bold",
 	},
 });

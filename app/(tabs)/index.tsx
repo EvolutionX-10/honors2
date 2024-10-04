@@ -70,7 +70,11 @@ export default function HomeScreen() {
 							</Pressable>
 						</Link>
 						<Feather name="shopping-cart" size={24} color="black" />
-						<Feather name="bell" size={24} color="black" />
+						<Link href="/notification" asChild>
+							<Pressable>
+								<Feather name="bell" size={24} color="black" />
+							</Pressable>
+						</Link>
 					</View>
 				</View>
 				<View style={styles.headerContainer}>
@@ -109,7 +113,7 @@ export default function HomeScreen() {
 				</View>
 				<Carousel />
 				<View style={{ width: "100%", padding: 16 }}>
-					<Text style={{ fontWeight: "condensedBold", fontSize: 16 }}>SHOP BY CATEGORY</Text>
+					<Text style={{ fontFamily: "Bebas", fontSize: 24 }}>SHOP BY CATEGORY</Text>
 					<View style={{ flexDirection: "row", gap: 16, marginTop: 16, justifyContent: "space-evenly" }}>
 						<View
 							style={{
@@ -123,7 +127,7 @@ export default function HomeScreen() {
 							}}
 						>
 							<Ionicons name="footsteps-outline" size={32} color="black" />
-							<Text style={{ fontWeight: "bold", fontSize: 16, color: "#f26522" }}>FOOTWEAR</Text>
+							<Text style={{ fontFamily: "Bebas", fontSize: 20, color: "#f26522" }}>FOOTWEAR</Text>
 						</View>
 						<View
 							style={{
@@ -137,7 +141,7 @@ export default function HomeScreen() {
 							}}
 						>
 							<Feather name="shopping-bag" size={32} color="black" />
-							<Text style={{ fontWeight: "bold", fontSize: 16, color: "#f26522" }}>BAGS</Text>
+							<Text style={{ fontFamily: "Bebas", fontSize: 20, color: "#f26522" }}>BAGS</Text>
 						</View>
 						<View
 							style={{
@@ -151,10 +155,11 @@ export default function HomeScreen() {
 							}}
 						>
 							<Ionicons name="shirt-outline" size={32} color="black" />
-							<Text style={{ fontWeight: "bold", fontSize: 16, color: "#f26522" }}>FOOTWEAR</Text>
+							<Text style={{ fontFamily: "Bebas", fontSize: 20, color: "#f26522" }}>APPAREL</Text>
 						</View>
 					</View>
 				</View>
+				<Text style={{ width: "100%", fontFamily: "Bebas", fontSize: 24, padding: 16 }}>For You</Text>
 				<ProductList />
 			</View>
 		</ScrollView>

@@ -7,12 +7,14 @@ import "react-native-reanimated";
 import { Link } from "expo-router";
 import { Platform, StatusBar, Text, View } from "react-native";
 import { Feather } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
 	const [loaded] = useFonts({
 		SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
+		Bebas: require("../assets/fonts/BebasNeue-Regular.ttf"),
 	});
 
 	useEffect(() => {
@@ -35,7 +37,6 @@ export default function RootLayout() {
 					options={{
 						title: "Wishlist",
 						header(props) {
-							console.log(props);
 							return (
 								<View
 									style={{
@@ -51,11 +52,42 @@ export default function RootLayout() {
 										<Link href="/" asChild>
 											<Feather name="arrow-left" size={24} color="black" />
 										</Link>
-										<Text style={{ fontSize: 20, fontWeight: "bold" }}>Wishlist</Text>
+										<Text style={{ fontSize: 20, fontFamily: "Bebas" }}>Wishlist</Text>
 									</View>
 									<View style={{ flexDirection: "row", gap: 16 }}>
 										<Feather name="shopping-cart" size={24} color="black" />
 										<Feather name="bell" size={24} color="black" />
+									</View>
+								</View>
+							);
+						},
+					}}
+				/>
+				<Stack.Screen
+					name="notification"
+					options={{
+						title: "Notification",
+						header(props) {
+							return (
+								<View
+									style={{
+										display: "flex",
+										flexDirection: "row",
+										justifyContent: "space-between",
+										alignItems: "center",
+										marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+										padding: 16,
+									}}
+								>
+									<View style={{ flexDirection: "row", gap: 16 }}>
+										<Link href="/" asChild>
+											<Feather name="arrow-left" size={24} color="black" />
+										</Link>
+										<Text style={{ fontSize: 20, fontFamily: "Bebas" }}>Notification</Text>
+									</View>
+									<View style={{ flexDirection: "row", gap: 8, alignItems: "center" }}>
+										<Ionicons name="checkmark-done" size={24} color="#f26522" />
+										<Text style={{ fontSize: 16, fontWeight: "condensed", color: "#f26522" }}>Mark as read</Text>
 									</View>
 								</View>
 							);
